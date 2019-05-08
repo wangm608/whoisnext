@@ -1,0 +1,328 @@
+.background{
+  background-image: white;
+  opacity: 0.7
+
+}
+.background2{
+  background-color: white;
+}
+.flex1{
+  display: flex;
+  flex-direction: row;
+  /* position: fixed; */
+}
+.flex2{
+  display: flex;
+  flex-direction: column;
+  /* position: fixed; */
+
+}
+.title {
+  font-size: 64pt;
+  font-family: 'Fredericka the Great', cursive;
+  color: black;
+
+}
+
+
+p {
+
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 24pt;
+  color: black;
+  align-items: center;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  opacity: 0.5;
+  transition: 1s;
+
+}
+p:hover{opacity: 1}
+
+
+
+
+
+.text{
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 24pt;
+  color: black;
+
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+
+}
+
+
+
+
+.animation-box {
+  width: 75%;
+  height: 27.5rem;
+
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.animation-container {
+  width: 1000rem;
+  height: 30rem;
+}
+
+@keyframes topFadeOut {
+  0% {
+    position: absolute;
+    top: -3rem;
+    opacity: 0;
+  }
+
+  75% {
+    position: absolute;
+    top: 25%;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bottomFadeOut {
+  0% {
+    position: absolute;
+    bottom: -5rem;
+    opacity: 0;
+  }
+
+  75% {
+    position: absolute;
+    bottom: 25%;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+@keyframes topFadeOutVertical {
+  0% {
+    position: absolute;
+    top: -3rem;
+    opacity: 0;
+  }
+
+  75% {
+    position: absolute;
+    top: 45%;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rightFadeInOut {
+  0% {
+    position: absolute;
+    right: -3rem;
+    opacity: 0;
+  }
+
+  75% {
+    position: absolute;
+    right: 10rem;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    right: 10rem;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+.first-text {
+  font-size: 4.4rem;
+  position: absolute;
+  left: 2.5rem;
+  top: 5rem;
+  opacity: 0;
+  animation-name: topFadeOut;
+  animation-duration: 5s;
+  color: black;
+  animation-iteration-count: infinite;
+}
+
+.second-text {
+  font-size: 3.4rem;
+  position: absolute;
+  top: 8.5rem;
+  opacity: 0;
+  animation-name: rightFadeInOut;
+  animation-delay: 3s;
+  animation-duration: 6s;
+  color: black;
+  animation-iteration-count: infinite;
+}
+
+.third-text {
+  transform: rotate(-90deg);
+  font-size: 2rem;
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  opacity: 0;
+  animation-name: topFadeOutVertical;
+  animation-delay: 7.5s;
+  animation-duration: 6s;
+  color: black;
+  white-space: nowrap;
+  animation-iteration-count: infinite;
+}
+
+.fourth-text {
+  font-size: 3.4rem;
+  position: absolute;
+  top: 10.5rem;
+  left: 10%;
+  opacity: 0;
+  color: black;
+  animation-name: fadeInOut;
+  animation-delay: 8.5s;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+}
+
+.fifth-text {
+  font-size: 5rem;
+  position: absolute;
+  left: 5%;
+  bottom: 25%;
+  opacity: 0;
+  color: black;
+  animation-name: bottomFadeOut;
+  animation-delay: 10s;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+}
+
+.floating {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:700');
+
+body {
+  background-color: black;
+  font-family: 'Oswald', sans-serif;
+}
+.bio {
+  text-align: center;
+  max-width: 70%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.bio p {
+  background-color: white;
+  color: black;
+  display:inline-block;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 0;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  transform: translateX(100%);
+  white-space: nowrap;
+}
+.text-moving {
+  animation: moveText linear 14s forwards infinite;
+}
+.text-moving2 {
+  animation: moveText linear 14s 5s forwards infinite;
+}
+.text-moving3 {
+  animation: moveText linear 14s 8s forwards infinite;
+}
+
+@keyframes moveText {
+	from { transform: translateX(100%); }
+	to { transform: translateX(-150%); }
+}
+
+.swing {
+    animation: swing ease-in-out 1s infinite alternate;
+    transform-origin: center -20px;
+    /* float:left; */
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+.swing img {
+    border: 5px solid #f8f8f8;
+    display: block;
+}
+.swing:after{
+    content: '';
+    /* position: absolute; */
+    width: 20px; height: 20px;
+    border: 1px solid #999;
+    top: -10px; left: 50%;
+    z-index: 0;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(45deg);
+}
+/* nail */
+.swing:before{
+    content: '';
+    /* position: absolute; */
+    width: 5px; height: 5px;
+    top: -14px;left: 54%;
+    z-index: 5;
+    /* border-radius: 50% 50%; */
+    background: #000;
+}
+
+@keyframes swing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
+.responsive {
+  width: auto;
+  height: auto;
+}
+.alessia{
+  font-size: 36pt;
+  font-family: fantasy;
+  color: black;
+  text-align: center;
+}
